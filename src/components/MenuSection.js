@@ -81,7 +81,6 @@ const MenuSection = () => {
 
   const handleViewFullMenu = () => {
     navigate('/all-menu');
-    // Reset scroll position to top after navigation
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
@@ -91,34 +90,34 @@ const MenuSection = () => {
   return (
     <section 
       id="menu"
-      className="menu-section py-20 bg-white"
+      className="menu-section py-12 md:py-20 bg-white overflow-x-hidden"
     >
       <div className="container mx-auto px-4">
-        <h2 className="section-title text-4xl font-bold text-center mb-16 text-red-900">
+        <h2 className="section-title text-3xl md:text-4xl font-bold text-center mb-10 md:mb-16 text-red-900">
           <span className="block font-cursive text-golden mb-2">招牌菜</span>
           Signature Dishes
         </h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
           {featuredDishes.map((dish) => (
             <div 
               key={dish.id}
-              className="dish-card bg-white rounded-lg overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl hover:transform hover:-translate-y-2"
+              className="dish-card bg-white rounded-lg overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl hover:transform hover:-translate-y-2 w-full"
             >
-              <div className="h-48 overflow-hidden">
+              <div className="h-40 sm:h-48 overflow-hidden">
                 <img 
                   src={dish.image} 
                   alt={dish.englishName}
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                 />
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-red-900">
-                  <span className="block text-golden">{dish.chineseName}</span>
+              <div className="p-4 md:p-6">
+                <h3 className="text-lg md:text-xl font-bold text-red-900">
+                  <span className="block text-golden text-base md:text-lg break-words">{dish.chineseName}</span>
                   {dish.englishName}
                 </h3>
-                <p className="text-gray-600 my-3">{dish.description}</p>
-                <p className="text-golden font-bold">{dish.price}</p>
+                <p className="text-gray-600 my-2 md:my-3 text-sm md:text-base">{dish.description}</p>
+                <p className="text-golden font-bold text-base md:text-lg">{dish.price}</p>
               </div>
             </div>
           ))}
