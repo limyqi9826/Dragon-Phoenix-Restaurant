@@ -81,6 +81,11 @@ const MenuSection = () => {
 
   const handleViewFullMenu = () => {
     navigate('/all-menu');
+    // Reset scroll position to top after navigation
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   };
 
   return (

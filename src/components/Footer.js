@@ -120,7 +120,10 @@ const Footer = () => {
 
         {/* Footer bottom */}
         <div className="border-t border-golden/30 mt-8 pt-8 text-center footer-section">
-          <p className="footer-line">&copy; {new Date().getFullYear()} Dragon Phoenix Restaurant. All rights reserved.</p>
+          <p className="footer-line">&copy; {new Date().getFullYear()} Dragon Phoenix Restaurant. All rights reserved.
+            <br />
+            This fictional restaurant website was designed and coded as a portfolio project. All content is original or sourced from royalty-free providers.
+          </p>
         </div>
       </div>
     </footer>
