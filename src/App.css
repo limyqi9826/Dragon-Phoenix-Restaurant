@@ -1,0 +1,15 @@
+@keyframes zoomInOut {
+  0% {
+    background-size: 110%;
+  }
+  50% {
+    background-size: 100%;
+  }
+  100% {
+    background-size: 110%;
+  }
+}
+
+.hero-section {
+  animation: zoomInOut 15s infinite ease-in-out;
+}
